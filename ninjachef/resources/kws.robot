@@ -5,17 +5,17 @@ Library		SeleniumLibrary
 
 *** Keywords ***
 Dado Que Acesso A Página Principal
-    Go To    http://ninjachef-qaninja-io.umbler.net/
+    Go To    ${base_url}
 
-Quando Submeto O Meu Email "${EMAIL}"
-    Input Text    id:email     ${EMAIL}
-    Click Element    css:button[type=submit]
+Quando Submeto O Meu Email "${email}"
+    Input Text          ${CAMPO_EMAIL}     ${email}
+    Click Element       ${BOTAO_ENTRAR}
 
 Então Devo Ser Autenticado
-    Wait Until Page Contains Element    class:dashboard
+    Wait Until Page Contains Element    ${DIV_DASH}
 
-Então Devo Ver A Mensagem "${MENSAGEM}"
-    Wait Until Element Contains     class:alert     ${MENSAGEM}
+Então Devo Ver A Mensagem "${mensagem}"
+    Wait Until Element Contains     ${DIV_ALERT}     ${mensagem}
 
 # Cadastro de Pratos
 Dado que "${produto}" é um dos meus pratos
@@ -23,15 +23,15 @@ Dado que "${produto}" é um dos meus pratos
 
 
 Quando eu faço o cadastro desse item
-    Wait Until Element Is Visible       class:btn-add       5
-    Click Element                       class:btn-add
+    Wait Until Element Is Visible       ${BOTAO_ADD}       5
+    Click Element                       ${BOTAO_ADD}
 
-    Choose File      css:input[id=thumbnail]    ${EXECDIR}/resources/images/${produto['img']}
+    Choose File      ${CAMPO_FOTO}      ${EXECDIR}/resources/images/${produto['img']}
 
-    Input Text       id:name            ${produto['nome']}
-    Input Text       id:plate           ${produto['tipo']}
-    Input Text       id:price           ${produto['preco']}
-    Click Element    class:btn-cadastrar
+    Input Text       ${CAMPO_NOME}            ${produto['nome']}
+    Input Text       ${CAMPO_TIPO}            ${produto['tipo']}
+    Input Text       ${CAMPO_PRECO}           ${produto['preco']}
+    Click Element    ${BOTAO_CADASTRAR}
 
 Então devo ver esse prato no meu dashboard
-    Wait Until Element Contains     class:product-list      ${produto['nome']}
+    Wait Until Element Contains     ${DIV_LISTA}      ${produto['nome']}

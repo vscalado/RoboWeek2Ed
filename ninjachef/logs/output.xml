@@ -1,7 +1,203 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.8.3 on win32)" generated="20200728 18:37:30.048" rpa="false">
-<suite id="s1" name="Produtos" source="G:\dev\projects\RobotFramework\RoboWeek2\ninjachef\tests\produtos.robot">
-<test id="s1-t1" name="Novo prato">
+<robot generator="Robot 3.2.1 (Python 3.8.3 on win32)" generated="20200728 19:22:04.399" rpa="false">
+<suite id="s1" name="Tests" source="G:\dev\projects\RobotFramework\RoboWeek2\ninjachef\tests">
+<suite id="s1-s1" name="Cadastro-Usuario" source="G:\dev\projects\RobotFramework\RoboWeek2\ninjachef\tests\cadastro-usuario.robot">
+<test id="s1-s1-t1" name="Cadstro Simples">
+<kw name="Open Session" library="base" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>auto:blank</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200728 19:22:04.840" level="INFO">Opening browser 'chrome' to base url 'auto:blank'.</msg>
+<status status="PASS" starttime="20200728 19:22:04.839" endtime="20200728 19:22:08.440"></status>
+</kw>
+<status status="PASS" starttime="20200728 19:22:04.839" endtime="20200728 19:22:08.441"></status>
+</kw>
+<kw name="Dado Que Acesso A Página Principal" library="kws">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${base_url}</arg>
+</arguments>
+<msg timestamp="20200728 19:22:08.445" level="INFO">Opening url 'http://ninjachef-qaninja-io.umbler.net/'</msg>
+<status status="PASS" starttime="20200728 19:22:08.444" endtime="20200728 19:22:09.648"></status>
+</kw>
+<status status="PASS" starttime="20200728 19:22:08.443" endtime="20200728 19:22:09.649"></status>
+</kw>
+<kw name="Quando Submeto O Meu Email &quot;vitor.santos.calado@gmail.com&quot;" library="kws">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${CAMPO_EMAIL}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200728 19:22:09.660" level="INFO">Typing text 'vitor.santos.calado@gmail.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20200728 19:22:09.659" endtime="20200728 19:22:10.184"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${BOTAO_ENTRAR}</arg>
+</arguments>
+<msg timestamp="20200728 19:22:10.185" level="INFO">Clicking element 'css:button[type=submit]'.</msg>
+<status status="PASS" starttime="20200728 19:22:10.184" endtime="20200728 19:22:10.290"></status>
+</kw>
+<status status="PASS" starttime="20200728 19:22:09.658" endtime="20200728 19:22:10.291"></status>
+</kw>
+<kw name="Então Devo Ser Autenticado" library="kws">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${DIV_DASH}</arg>
+</arguments>
+<status status="PASS" starttime="20200728 19:22:10.292" endtime="20200728 19:22:10.586"></status>
+</kw>
+<status status="PASS" starttime="20200728 19:22:10.291" endtime="20200728 19:22:10.587"></status>
+</kw>
+<kw name="Close Session" library="base" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200728 19:22:10.590" endtime="20200728 19:22:12.921"></status>
+</kw>
+<status status="PASS" starttime="20200728 19:22:10.590" endtime="20200728 19:22:12.921"></status>
+</kw>
+<status status="PASS" starttime="20200728 19:22:04.838" endtime="20200728 19:22:12.923" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="Email Incorreto">
+<kw name="Open Session" library="base" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>auto:blank</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200728 19:22:12.934" level="INFO">Opening browser 'chrome' to base url 'auto:blank'.</msg>
+<status status="PASS" starttime="20200728 19:22:12.933" endtime="20200728 19:22:16.439"></status>
+</kw>
+<status status="PASS" starttime="20200728 19:22:12.932" endtime="20200728 19:22:16.440"></status>
+</kw>
+<kw name="Dado Que Acesso A Página Principal" library="kws">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${base_url}</arg>
+</arguments>
+<msg timestamp="20200728 19:22:16.442" level="INFO">Opening url 'http://ninjachef-qaninja-io.umbler.net/'</msg>
+<status status="PASS" starttime="20200728 19:22:16.442" endtime="20200728 19:22:17.402"></status>
+</kw>
+<status status="PASS" starttime="20200728 19:22:16.441" endtime="20200728 19:22:17.403"></status>
+</kw>
+<kw name="Quando Submeto O Meu Email &quot;joao&amp;gmail.com&quot;" library="kws">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${CAMPO_EMAIL}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200728 19:22:17.406" level="INFO">Typing text 'joao&amp;gmail.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20200728 19:22:17.405" endtime="20200728 19:22:17.699"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${BOTAO_ENTRAR}</arg>
+</arguments>
+<msg timestamp="20200728 19:22:17.699" level="INFO">Clicking element 'css:button[type=submit]'.</msg>
+<status status="PASS" starttime="20200728 19:22:17.699" endtime="20200728 19:22:17.789"></status>
+</kw>
+<status status="PASS" starttime="20200728 19:22:17.404" endtime="20200728 19:22:17.790"></status>
+</kw>
+<kw name="Então Devo Ver A Mensagem &quot;Oops. Informe um email válido!&quot;" library="kws">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>${DIV_ALERT}</arg>
+<arg>${mensagem}</arg>
+</arguments>
+<status status="PASS" starttime="20200728 19:22:17.792" endtime="20200728 19:22:17.836"></status>
+</kw>
+<status status="PASS" starttime="20200728 19:22:17.791" endtime="20200728 19:22:17.836"></status>
+</kw>
+<kw name="Close Session" library="base" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200728 19:22:17.838" endtime="20200728 19:22:20.125"></status>
+</kw>
+<status status="PASS" starttime="20200728 19:22:17.837" endtime="20200728 19:22:20.126"></status>
+</kw>
+<status status="PASS" starttime="20200728 19:22:12.930" endtime="20200728 19:22:20.128" critical="yes"></status>
+</test>
+<test id="s1-s1-t3" name="Email Em Branco">
+<kw name="Open Session" library="base" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>auto:blank</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200728 19:22:20.145" level="INFO">Opening browser 'chrome' to base url 'auto:blank'.</msg>
+<status status="PASS" starttime="20200728 19:22:20.143" endtime="20200728 19:22:23.692"></status>
+</kw>
+<status status="PASS" starttime="20200728 19:22:20.140" endtime="20200728 19:22:23.693"></status>
+</kw>
+<kw name="Dado Que Acesso A Página Principal" library="kws">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${base_url}</arg>
+</arguments>
+<msg timestamp="20200728 19:22:23.696" level="INFO">Opening url 'http://ninjachef-qaninja-io.umbler.net/'</msg>
+<status status="PASS" starttime="20200728 19:22:23.695" endtime="20200728 19:22:24.626"></status>
+</kw>
+<status status="PASS" starttime="20200728 19:22:23.694" endtime="20200728 19:22:24.626"></status>
+</kw>
+<kw name="Quando Submeto O Meu Email &quot;${EMPTY}&quot;" library="kws">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${CAMPO_EMAIL}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200728 19:22:24.630" level="INFO">Typing text '' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20200728 19:22:24.629" endtime="20200728 19:22:24.841"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${BOTAO_ENTRAR}</arg>
+</arguments>
+<msg timestamp="20200728 19:22:24.843" level="INFO">Clicking element 'css:button[type=submit]'.</msg>
+<status status="PASS" starttime="20200728 19:22:24.842" endtime="20200728 19:22:24.966"></status>
+</kw>
+<status status="PASS" starttime="20200728 19:22:24.628" endtime="20200728 19:22:24.966"></status>
+</kw>
+<kw name="Então Devo Ver A Mensagem &quot;Oops. Informe um email válido!&quot;" library="kws">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>${DIV_ALERT}</arg>
+<arg>${mensagem}</arg>
+</arguments>
+<status status="PASS" starttime="20200728 19:22:24.968" endtime="20200728 19:22:25.019"></status>
+</kw>
+<status status="PASS" starttime="20200728 19:22:24.967" endtime="20200728 19:22:25.019"></status>
+</kw>
+<kw name="Close Session" library="base" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200728 19:22:25.021" endtime="20200728 19:22:27.296"></status>
+</kw>
+<status status="PASS" starttime="20200728 19:22:25.020" endtime="20200728 19:22:27.297"></status>
+</kw>
+<status status="PASS" starttime="20200728 19:22:20.136" endtime="20200728 19:22:27.298" critical="yes"></status>
+</test>
+<doc>Suite dos testes de cadastro</doc>
+<status status="PASS" starttime="20200728 19:22:04.469" endtime="20200728 19:22:27.302"></status>
+</suite>
+<suite id="s1-s2" name="Produtos" source="G:\dev\projects\RobotFramework\RoboWeek2\ninjachef\tests\produtos.robot">
+<test id="s1-s2-t1" name="Novo Prato">
 <kw name="Login Session" library="helpers" type="setup">
 <arguments>
 <arg>vitor.santos.calado@gmail.com</arg>
@@ -13,44 +209,44 @@
 <arg>auto:blank</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20200728 18:37:30.575" level="INFO">Opening browser 'chrome' to base url 'auto:blank'.</msg>
-<status status="PASS" starttime="20200728 18:37:30.575" endtime="20200728 18:37:34.203"></status>
+<msg timestamp="20200728 19:22:27.340" level="INFO">Opening browser 'chrome' to base url 'auto:blank'.</msg>
+<status status="PASS" starttime="20200728 19:22:27.340" endtime="20200728 19:22:30.839"></status>
 </kw>
-<status status="PASS" starttime="20200728 18:37:30.573" endtime="20200728 18:37:34.203"></status>
+<status status="PASS" starttime="20200728 19:22:27.338" endtime="20200728 19:22:30.840"></status>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <doc>Navigates the active browser instance to the provided ``url``.</doc>
 <arguments>
-<arg>http://ninjachef-qaninja-io.umbler.net/</arg>
+<arg>${base_url}</arg>
 </arguments>
-<msg timestamp="20200728 18:37:34.204" level="INFO">Opening url 'http://ninjachef-qaninja-io.umbler.net/'</msg>
-<status status="PASS" starttime="20200728 18:37:34.204" endtime="20200728 18:37:35.358"></status>
+<msg timestamp="20200728 19:22:30.841" level="INFO">Opening url 'http://ninjachef-qaninja-io.umbler.net/'</msg>
+<status status="PASS" starttime="20200728 19:22:30.840" endtime="20200728 19:22:31.836"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
 <arguments>
-<arg>id:email</arg>
-<arg>${EMAIL}</arg>
+<arg>${CAMPO_EMAIL}</arg>
+<arg>${email}</arg>
 </arguments>
-<msg timestamp="20200728 18:37:35.359" level="INFO">Typing text 'vitor.santos.calado@gmail.com' into text field 'id:email'.</msg>
-<status status="PASS" starttime="20200728 18:37:35.358" endtime="20200728 18:37:35.930"></status>
+<msg timestamp="20200728 19:22:31.838" level="INFO">Typing text 'vitor.santos.calado@gmail.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20200728 19:22:31.837" endtime="20200728 19:22:32.269"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
-<arg>css:button[type=submit]</arg>
+<arg>${BOTAO_ENTRAR}</arg>
 </arguments>
-<msg timestamp="20200728 18:37:35.930" level="INFO">Clicking element 'css:button[type=submit]'.</msg>
-<status status="PASS" starttime="20200728 18:37:35.930" endtime="20200728 18:37:36.037"></status>
+<msg timestamp="20200728 19:22:32.270" level="INFO">Clicking element 'css:button[type=submit]'.</msg>
+<status status="PASS" starttime="20200728 19:22:32.269" endtime="20200728 19:22:32.360"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
-<arg>class:dashboard</arg>
+<arg>${DIV_DASH}</arg>
 </arguments>
-<status status="PASS" starttime="20200728 18:37:36.038" endtime="20200728 18:37:36.326"></status>
+<status status="PASS" starttime="20200728 19:22:32.360" endtime="20200728 19:22:32.651"></status>
 </kw>
-<status status="PASS" starttime="20200728 18:37:30.572" endtime="20200728 18:37:36.327"></status>
+<status status="PASS" starttime="20200728 19:22:27.337" endtime="20200728 19:22:32.652"></status>
 </kw>
 <kw name="Dado que &quot;${nnhoque}&quot; é um dos meus pratos" library="kws">
 <kw name="Set Test Variable" library="BuiltIn">
@@ -58,116 +254,112 @@
 <arguments>
 <arg>${produto}</arg>
 </arguments>
-<msg timestamp="20200728 18:37:36.332" level="INFO">${produto} = {'img': 'nhoquepaprica.jpg', 'nome': 'Nnhoque molhoo páprica', 'tipo': 'Massas', 'preco': '20.00'}</msg>
-<status status="PASS" starttime="20200728 18:37:36.331" endtime="20200728 18:37:36.332"></status>
+<msg timestamp="20200728 19:22:32.657" level="INFO">${produto} = {'img': 'nhoquepaprica.jpg', 'nome': 'Nnhoque molhoo páprica', 'tipo': 'Massas', 'preco': '20.00'}</msg>
+<status status="PASS" starttime="20200728 19:22:32.655" endtime="20200728 19:22:32.657"></status>
 </kw>
-<status status="PASS" starttime="20200728 18:37:36.331" endtime="20200728 18:37:36.332"></status>
+<status status="PASS" starttime="20200728 19:22:32.654" endtime="20200728 19:22:32.657"></status>
 </kw>
 <kw name="Quando eu faço o cadastro desse item" library="kws">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until element ``locator`` is visible.</doc>
 <arguments>
-<arg>class:btn-add</arg>
+<arg>${BOTAO_ADD}</arg>
 <arg>5</arg>
 </arguments>
-<status status="PASS" starttime="20200728 18:37:36.337" endtime="20200728 18:37:36.645"></status>
+<status status="PASS" starttime="20200728 19:22:32.659" endtime="20200728 19:22:32.975"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
-<arg>class:btn-add</arg>
+<arg>${BOTAO_ADD}</arg>
 </arguments>
-<msg timestamp="20200728 18:37:36.645" level="INFO">Clicking element 'class:btn-add'.</msg>
-<status status="PASS" starttime="20200728 18:37:36.645" endtime="20200728 18:37:36.827"></status>
+<msg timestamp="20200728 19:22:32.977" level="INFO">Clicking element 'class:btn-add'.</msg>
+<status status="PASS" starttime="20200728 19:22:32.976" endtime="20200728 19:22:33.179"></status>
 </kw>
 <kw name="Choose File" library="SeleniumLibrary">
 <doc>Inputs the ``file_path`` into file input field ``locator``.</doc>
 <arguments>
-<arg>css:input[id=thumbnail]</arg>
+<arg>${CAMPO_FOTO}</arg>
 <arg>${EXECDIR}/resources/images/${produto['img']}</arg>
 </arguments>
-<status status="PASS" starttime="20200728 18:37:36.828" endtime="20200728 18:37:36.958"></status>
+<status status="PASS" starttime="20200728 19:22:33.179" endtime="20200728 19:22:33.300"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
 <arguments>
-<arg>id:name</arg>
+<arg>${CAMPO_NOME}</arg>
 <arg>${produto['nome']}</arg>
 </arguments>
-<msg timestamp="20200728 18:37:36.960" level="INFO">Typing text 'Nnhoque molhoo páprica' into text field 'id:name'.</msg>
-<status status="PASS" starttime="20200728 18:37:36.959" endtime="20200728 18:37:37.402"></status>
+<msg timestamp="20200728 19:22:33.301" level="INFO">Typing text 'Nnhoque molhoo páprica' into text field 'id:name'.</msg>
+<status status="PASS" starttime="20200728 19:22:33.300" endtime="20200728 19:22:33.648"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
 <arguments>
-<arg>id:plate</arg>
+<arg>${CAMPO_TIPO}</arg>
 <arg>${produto['tipo']}</arg>
 </arguments>
-<msg timestamp="20200728 18:37:37.403" level="INFO">Typing text 'Massas' into text field 'id:plate'.</msg>
-<status status="PASS" starttime="20200728 18:37:37.402" endtime="20200728 18:37:37.678"></status>
+<msg timestamp="20200728 19:22:33.649" level="INFO">Typing text 'Massas' into text field 'id:plate'.</msg>
+<status status="PASS" starttime="20200728 19:22:33.648" endtime="20200728 19:22:33.849"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
 <arguments>
-<arg>id:price</arg>
+<arg>${CAMPO_PRECO}</arg>
 <arg>${produto['preco']}</arg>
 </arguments>
-<msg timestamp="20200728 18:37:37.679" level="INFO">Typing text '20.00' into text field 'id:price'.</msg>
-<status status="PASS" starttime="20200728 18:37:37.678" endtime="20200728 18:37:37.901"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>10</arg>
-</arguments>
-<msg timestamp="20200728 18:37:47.902" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20200728 18:37:37.901" endtime="20200728 18:37:47.902"></status>
+<msg timestamp="20200728 19:22:33.850" level="INFO">Typing text '20.00' into text field 'id:price'.</msg>
+<status status="PASS" starttime="20200728 19:22:33.849" endtime="20200728 19:22:34.065"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
-<arg>class:btn-cadastrar</arg>
+<arg>${BOTAO_CADASTRAR}</arg>
 </arguments>
-<msg timestamp="20200728 18:37:47.903" level="INFO">Clicking element 'class:btn-cadastrar'.</msg>
-<status status="PASS" starttime="20200728 18:37:47.902" endtime="20200728 18:37:48.037"></status>
+<msg timestamp="20200728 19:22:34.066" level="INFO">Clicking element 'class:btn-cadastrar'.</msg>
+<status status="PASS" starttime="20200728 19:22:34.066" endtime="20200728 19:22:34.162"></status>
 </kw>
-<status status="PASS" starttime="20200728 18:37:36.334" endtime="20200728 18:37:48.037"></status>
+<status status="PASS" starttime="20200728 19:22:32.658" endtime="20200728 19:22:34.162"></status>
 </kw>
 <kw name="Então devo ver esse prato no meu dashboard" library="kws">
 <kw name="Wait Until Element Contains" library="SeleniumLibrary">
 <doc>Waits until element ``locator`` contains ``text``.</doc>
 <arguments>
-<arg>class:product-list</arg>
+<arg>${DIV_LISTA}</arg>
 <arg>${produto['nome']}</arg>
 </arguments>
-<status status="PASS" starttime="20200728 18:37:48.039" endtime="20200728 18:37:49.055"></status>
+<status status="PASS" starttime="20200728 19:22:34.164" endtime="20200728 19:22:35.094"></status>
 </kw>
-<status status="PASS" starttime="20200728 18:37:48.038" endtime="20200728 18:37:49.056"></status>
+<status status="PASS" starttime="20200728 19:22:34.163" endtime="20200728 19:22:35.095"></status>
 </kw>
 <kw name="Close Session" library="base" type="teardown">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20200728 18:37:49.058" endtime="20200728 18:37:51.421"></status>
+<status status="PASS" starttime="20200728 19:22:35.097" endtime="20200728 19:22:37.360"></status>
 </kw>
-<status status="PASS" starttime="20200728 18:37:49.057" endtime="20200728 18:37:51.421"></status>
+<status status="PASS" starttime="20200728 19:22:35.096" endtime="20200728 19:22:37.361"></status>
 </kw>
-<status status="PASS" starttime="20200728 18:37:30.570" endtime="20200728 18:37:51.422" critical="yes"></status>
+<status status="PASS" starttime="20200728 19:22:27.334" endtime="20200728 19:22:37.362" critical="yes"></status>
 </test>
 <doc>Cadastro de produtos/pratos
 Sendo um cosinheiro amador
 Quero cadastrar meus melhores pratos
 Para que eu possa cozinha-los para outras pessoas</doc>
-<status status="PASS" starttime="20200728 18:37:30.051" endtime="20200728 18:37:51.426"></status>
+<status status="PASS" starttime="20200728 19:22:27.313" endtime="20200728 19:22:37.368"></status>
+</suite>
+<status status="PASS" starttime="20200728 19:22:04.403" endtime="20200728 19:22:37.381"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0">Critical Tests</stat>
-<stat pass="1" fail="0">All Tests</stat>
+<stat pass="4" fail="0">Critical Tests</stat>
+<stat pass="4" fail="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="Produtos">Produtos</stat>
+<stat pass="4" fail="0" id="s1" name="Tests">Tests</stat>
+<stat pass="3" fail="0" id="s1-s1" name="Cadastro-Usuario">Tests.Cadastro-Usuario</stat>
+<stat pass="1" fail="0" id="s1-s2" name="Produtos">Tests.Produtos</stat>
 </suite>
 </statistics>
 <errors>
