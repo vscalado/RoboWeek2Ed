@@ -13,7 +13,7 @@ Test Teardown		Close Session
 &{nnhoque}=         img=nhoquepaprica.jpg   nome=Nnhoque molhoo páprica     tipo=Massas     preco=20.00
 
 *** Test Case ***
-Novo prato
+Novo Prato
     Dado que "${nnhoque}" é um dos meus pratos
     Quando eu faço o cadastro desse item
     Então devo ver esse prato no meu dashboard
