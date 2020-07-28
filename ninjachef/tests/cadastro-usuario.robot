@@ -9,7 +9,7 @@ Test Teardown		Close Session
 *** Test Case ***
 Cadstro Simples
 	Dado Que Acesso A Página Principal
-	Quando Submeto O Meu Email "joao@gmail.com"
+	Quando Submeto O Meu Email "vitor.santos.calado@gmail.com"
 	Então Devo Ser Autenticado
 
 Email Incorreto

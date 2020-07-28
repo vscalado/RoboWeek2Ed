@@ -16,4 +16,18 @@ Então Devo Ser Autenticado
 
 Então Devo Ver A Mensagem "${MENSAGEM}"
     Wait Until Element Contains     class:alert     ${MENSAGEM}
-    
+
+# Cadastro de Pratos
+Dado que "${produto}" é um dos meus pratos
+    Set Test Variable    ${produto}
+
+
+Quando eu faço o cadastro desse item
+    Click Element    class:btn-add
+    Input Text       id:name            ${produto['nome']}
+    Input Text       id:plate           ${produto['tipo']}
+    Input Text       id:price           ${produto['preco']}
+    Click Element    class:btn-cadastrar
+
+Então devo ver esse prato no meu dashboard
+    Wait Until Element Contains     class:product-list      ${produto['nome']}
