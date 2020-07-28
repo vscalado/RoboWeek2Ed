@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.3 on win32)" generated="20200728 17:29:22.645" rpa="false">
+<suite id="s1" name="Cadastro" source="G:\dev\projects\RobotFramework\RoboWeek2\ninjachef\tests\cadastro.robot">
+<test id="s1-t1" name="Cadstro Simples">
+<kw name="Open Session" library="base" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>auto:blank</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200728 17:29:23.550" level="INFO">Opening browser 'chrome' to base url 'auto:blank'.</msg>
+<status status="PASS" starttime="20200728 17:29:23.550" endtime="20200728 17:29:29.483"></status>
+</kw>
+<status status="PASS" starttime="20200728 17:29:23.549" endtime="20200728 17:29:29.484"></status>
+</kw>
+<kw name="Dado Que Acesso A Página Principal" library="kws">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>http://ninjachef-qaninja-io.umbler.net/</arg>
+</arguments>
+<msg timestamp="20200728 17:29:29.487" level="INFO">Opening url 'http://ninjachef-qaninja-io.umbler.net/'</msg>
+<status status="PASS" starttime="20200728 17:29:29.487" endtime="20200728 17:29:30.898"></status>
+</kw>
+<status status="PASS" starttime="20200728 17:29:29.485" endtime="20200728 17:29:30.898"></status>
+</kw>
+<kw name="Quando Submeto O Meu Email &quot;joao@gmail.com&quot;" library="kws">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:email</arg>
+<arg>${EMAIL}</arg>
+</arguments>
+<msg timestamp="20200728 17:29:30.906" level="INFO">Typing text 'joao@gmail.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20200728 17:29:30.905" endtime="20200728 17:29:31.398"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>css:button[type=submit]</arg>
+</arguments>
+<msg timestamp="20200728 17:29:31.399" level="INFO">Clicking element 'css:button[type=submit]'.</msg>
+<status status="PASS" starttime="20200728 17:29:31.398" endtime="20200728 17:29:31.515"></status>
+</kw>
+<status status="PASS" starttime="20200728 17:29:30.903" endtime="20200728 17:29:31.515"></status>
+</kw>
+<kw name="Então Devo Ser Autenticado" library="kws">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>class:dashboard</arg>
+</arguments>
+<status status="PASS" starttime="20200728 17:29:31.517" endtime="20200728 17:29:31.828"></status>
+</kw>
+<status status="PASS" starttime="20200728 17:29:31.516" endtime="20200728 17:29:31.829"></status>
+</kw>
+<kw name="Close Session" library="base" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200728 17:29:31.836" endtime="20200728 17:29:34.155"></status>
+</kw>
+<status status="PASS" starttime="20200728 17:29:31.835" endtime="20200728 17:29:34.156"></status>
+</kw>
+<status status="PASS" starttime="20200728 17:29:23.548" endtime="20200728 17:29:34.157" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Email Incorreto">
+<kw name="Open Session" library="base" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>auto:blank</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200728 17:29:34.162" level="INFO">Opening browser 'chrome' to base url 'auto:blank'.</msg>
+<status status="PASS" starttime="20200728 17:29:34.162" endtime="20200728 17:29:37.791"></status>
+</kw>
+<status status="PASS" starttime="20200728 17:29:34.161" endtime="20200728 17:29:37.792"></status>
+</kw>
+<kw name="Dado Que Acesso A Página Principal" library="kws">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>http://ninjachef-qaninja-io.umbler.net/</arg>
+</arguments>
+<msg timestamp="20200728 17:29:37.795" level="INFO">Opening url 'http://ninjachef-qaninja-io.umbler.net/'</msg>
+<status status="PASS" starttime="20200728 17:29:37.795" endtime="20200728 17:29:40.730"></status>
+</kw>
+<status status="PASS" starttime="20200728 17:29:37.793" endtime="20200728 17:29:40.732"></status>
+</kw>
+<kw name="Quando Submeto O Meu Email &quot;joao&amp;gmail.com&quot;" library="kws">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:email</arg>
+<arg>${EMAIL}</arg>
+</arguments>
+<msg timestamp="20200728 17:29:40.737" level="INFO">Typing text 'joao&amp;gmail.com' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20200728 17:29:40.736" endtime="20200728 17:29:41.316"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>css:button[type=submit]</arg>
+</arguments>
+<msg timestamp="20200728 17:29:41.317" level="INFO">Clicking element 'css:button[type=submit]'.</msg>
+<status status="PASS" starttime="20200728 17:29:41.316" endtime="20200728 17:29:41.459"></status>
+</kw>
+<status status="PASS" starttime="20200728 17:29:40.734" endtime="20200728 17:29:41.459"></status>
+</kw>
+<kw name="Então Devo Ver A Mensagem &quot;Oops. Informe um email válido!&quot;" library="kws">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>class:alert</arg>
+<arg>${MENSAGEM}</arg>
+</arguments>
+<status status="PASS" starttime="20200728 17:29:41.466" endtime="20200728 17:29:41.588"></status>
+</kw>
+<status status="PASS" starttime="20200728 17:29:41.465" endtime="20200728 17:29:41.588"></status>
+</kw>
+<kw name="Close Session" library="base" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200728 17:29:41.590" endtime="20200728 17:29:43.860"></status>
+</kw>
+<status status="PASS" starttime="20200728 17:29:41.589" endtime="20200728 17:29:43.861"></status>
+</kw>
+<status status="PASS" starttime="20200728 17:29:34.160" endtime="20200728 17:29:43.861" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Email Em Branco">
+<kw name="Open Session" library="base" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>auto:blank</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200728 17:29:43.869" level="INFO">Opening browser 'chrome' to base url 'auto:blank'.</msg>
+<status status="PASS" starttime="20200728 17:29:43.868" endtime="20200728 17:29:48.021"></status>
+</kw>
+<status status="PASS" starttime="20200728 17:29:43.867" endtime="20200728 17:29:48.022"></status>
+</kw>
+<kw name="Dado Que Acesso A Página Principal" library="kws">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>http://ninjachef-qaninja-io.umbler.net/</arg>
+</arguments>
+<msg timestamp="20200728 17:29:48.025" level="INFO">Opening url 'http://ninjachef-qaninja-io.umbler.net/'</msg>
+<status status="PASS" starttime="20200728 17:29:48.024" endtime="20200728 17:29:49.540"></status>
+</kw>
+<status status="PASS" starttime="20200728 17:29:48.023" endtime="20200728 17:29:49.540"></status>
+</kw>
+<kw name="Quando Submeto O Meu Email &quot;${EMPTY}&quot;" library="kws">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:email</arg>
+<arg>${EMAIL}</arg>
+</arguments>
+<msg timestamp="20200728 17:29:49.544" level="INFO">Typing text '' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20200728 17:29:49.544" endtime="20200728 17:29:49.793"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>css:button[type=submit]</arg>
+</arguments>
+<msg timestamp="20200728 17:29:49.795" level="INFO">Clicking element 'css:button[type=submit]'.</msg>
+<status status="PASS" starttime="20200728 17:29:49.794" endtime="20200728 17:29:49.923"></status>
+</kw>
+<status status="PASS" starttime="20200728 17:29:49.542" endtime="20200728 17:29:49.924"></status>
+</kw>
+<kw name="Então Devo Ver A Mensagem &quot;Oops. Informe um email válido!&quot;" library="kws">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>class:alert</arg>
+<arg>${MENSAGEM}</arg>
+</arguments>
+<status status="PASS" starttime="20200728 17:29:49.926" endtime="20200728 17:29:49.974"></status>
+</kw>
+<status status="PASS" starttime="20200728 17:29:49.925" endtime="20200728 17:29:49.974"></status>
+</kw>
+<kw name="Close Session" library="base" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200728 17:29:49.976" endtime="20200728 17:29:52.374"></status>
+</kw>
+<status status="PASS" starttime="20200728 17:29:49.975" endtime="20200728 17:29:52.375"></status>
+</kw>
+<status status="PASS" starttime="20200728 17:29:43.864" endtime="20200728 17:29:52.376" critical="yes"></status>
+</test>
+<doc>Suite dos testes de cadastro</doc>
+<status status="PASS" starttime="20200728 17:29:22.660" endtime="20200728 17:29:52.382"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" id="s1" name="Cadastro">Cadastro</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
