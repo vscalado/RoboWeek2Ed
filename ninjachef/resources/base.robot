@@ -5,6 +5,8 @@ Documentation   Aqui temos a estrutura base do projeto, o selenium é importado
 Library     SeleniumLibrary
 
 Resource     kws.robot
+Resource     helpers.robot
+
 *** Keywords ***
 Open Session
     Open Browser    auto:blank      chrome

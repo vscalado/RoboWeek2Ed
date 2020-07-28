@@ -6,11 +6,11 @@ Documentation       Cadastro de produtos/pratos
 
 Resource            ../resources/base.robot
 
-Test Setup			Open Session
+Test Setup			Login Session      vitor.santos.calado@gmail.com
 Test Teardown		Close Session
 
 *** Variables ***
-&{nnhoque}=         nome=Nnhoque molhoo páprica     tipo=Massas     preco=20.00
+&{nnhoque}=         img=nhoquepaprica.jpg   nome=Nnhoque molhoo páprica     tipo=Massas     preco=20.00
 
 *** Test Case ***
 Novo prato
