@@ -17,4 +17,5 @@ Open Session
     Open Browser    auto:blank      chrome
 
 Close Session
+    Capture Page Screenshot
     Close Browser
